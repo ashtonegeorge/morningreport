@@ -1,16 +1,9 @@
 import asyncio
 from datetime import datetime
-from autogen_agentchat.agents import AssistantAgent
-from autogen_agentchat.ui import Console
-from autogen_ext.models.openai import OpenAIChatCompletionClient
-from dotenv import load_dotenv
-
 from agents.tasks import task_agent
 from agents.news import news_agent
 from agents.weather import weather_agent
 from agents.mailer import mailer_agent
-
-load_dotenv()
 
 async def main() -> None:
     date = datetime.now()

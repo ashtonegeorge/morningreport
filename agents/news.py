@@ -1,12 +1,8 @@
 from autogen_agentchat.agents import AssistantAgent
 from autogen_ext.models.openai import OpenAIChatCompletionClient
-from autogen_agentchat.ui import Console
 from autogen_ext.models.openai import OpenAIChatCompletionClient
 import requests
-from dotenv import load_dotenv
 import os
-
-load_dotenv()
 
 model_client = OpenAIChatCompletionClient(
     model="gpt-4o",
