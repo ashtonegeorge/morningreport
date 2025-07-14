@@ -1,3 +1,4 @@
+import asyncio
 from datetime import datetime
 from autogen_agentchat.agents import AssistantAgent
 from autogen_agentchat.ui import Console
@@ -20,4 +21,4 @@ async def main() -> None:
     await mailer_agent.run(task=f"Please send my morning report. Use the date, {formattedDate}, and following pieces of data to create the subject and body: Weather - {weather_summary}, News - {news_summary}, Tasks - {task_summary}")
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
