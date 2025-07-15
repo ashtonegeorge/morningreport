@@ -5,7 +5,7 @@ import requests
 import os
 
 model_client = OpenAIChatCompletionClient(
-    model="gpt-4o",
+    model="gpt-4o-mini",
     api_key=os.environ["OPENAI_API_KEY"],
 )
 
@@ -20,7 +20,7 @@ news_agent = AssistantAgent(
     name="NewsAgent",
     model_client=model_client,
     system_message="You are a news assistant who analyzes news articles and suscinctly summarizes them.",
-    reflect_on_tool_use=True,
+    reflect_on_tool_use=False,
     model_client_stream=True,
     tools= [ get_news ],
 )

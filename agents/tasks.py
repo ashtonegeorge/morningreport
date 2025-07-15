@@ -5,7 +5,7 @@ from autogen_ext.models.openai import OpenAIChatCompletionClient
 import os
 
 model_client = OpenAIChatCompletionClient(
-    model="gpt-4o",
+    model="gpt-4o-mini",
     api_key=os.environ["OPENAI_API_KEY"],
 )
 
